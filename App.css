@@ -1,0 +1,445 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f7faf7;
+}
+
+/* ==========================================================================
+   Landing Page (Task 3 & 4)
+   ========================================================================== */
+.landing-page {
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.landing-content {
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  padding: 45px 50px;
+  border-radius: 14px;
+  text-align: center;
+  max-width: 720px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.company-name {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin: 0 0 10px;
+  letter-spacing: 1px;
+  color: #a5d6a7;
+}
+
+.tagline {
+  font-size: 1.35rem;
+  font-style: italic;
+  margin: 0 0 28px;
+  color: #e8f5e9;
+}
+
+.get-started-button {
+  background: #2e7d32;
+  color: #ffffff;
+  border: none;
+  padding: 14px 38px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.4);
+}
+
+.get-started-button:hover {
+  background: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(46, 125, 50, 0.6);
+}
+
+/* ==========================================================================
+   About Us Section (Task 2)
+   ========================================================================== */
+.about-us-container {
+  background: rgba(255, 255, 255, 0.12);
+  margin-top: 30px;
+  padding: 22px 26px;
+  border-radius: 10px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.about-us-heading {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #81c784;
+}
+
+.about-us-description {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #c8e6c9;
+  margin-bottom: 12px;
+}
+
+.about-us-content {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 12px;
+  color: #f1f8e9;
+}
+
+/* ==========================================================================
+   Navbar (Task 6)
+   ========================================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2e7d32;
+  color: #ffffff;
+  padding: 14px 36px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.navbar .nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+.cart-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: #ff5252;
+  color: #ffffff;
+  border-radius: 50%;
+  min-width: 24px;
+  height: 24px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   Product List & Plant Grid (Task 6)
+   ========================================================================== */
+.product-grid-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 28px 60px;
+}
+
+.category-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 36px 0 20px;
+  color: #2e7d32;
+  border-bottom: 2px solid #c8e6c9;
+  padding-bottom: 8px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-thumbnail {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #e8f5e9;
+}
+
+.product-name {
+  margin: 12px 0 6px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.product-description {
+  font-size: 0.92rem;
+  color: #555555;
+  line-height: 1.45;
+  margin: 0 0 12px;
+  flex-grow: 1;
+}
+
+.product-price {
+  color: #2e7d32;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.add-to-cart-btn {
+  background: #2e7d32;
+  color: #ffffff;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  background: #1b5e20;
+}
+
+.add-to-cart-btn:disabled {
+  background: #9e9e9e;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   Shopping Cart (Task 7)
+   ========================================================================== */
+.cart-container {
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 0 24px;
+}
+
+.cart-heading {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2e7d32;
+  margin-bottom: 24px;
+}
+
+.cart-items-list {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  padding: 10px 24px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  border-bottom: 1px solid #eeeeee;
+  padding: 18px 0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image {
+  width: 110px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-name {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  color: #1b5e20;
+}
+
+.cart-item-price {
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 1px solid #2e7d32;
+  background: #ffffff;
+  color: #2e7d32;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.quantity-btn:hover {
+  background: #2e7d32;
+  color: #ffffff;
+}
+
+.quantity-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  min-width: 24px;
+  text-align: center;
+}
+
+.cart-item-total {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #2e7d32;
+  min-width: 140px;
+  text-align: right;
+}
+
+.delete-btn {
+  background: #d32f2f;
+  color: #ffffff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #b71c1c;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 28px 0;
+  color: #1b5e20;
+}
+
+.cart-total span {
+  color: #2e7d32;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.continue-btn,
+.checkout-btn {
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.continue-btn {
+  background: #1976d2;
+}
+
+.continue-btn:hover {
+  background: #1565c0;
+}
+
+.checkout-btn {
+  background: #2e7d32;
+}
+
+.checkout-btn:hover {
+  background: #1b5e20;
+}
+
+.empty-cart {
+  text-align: center;
+  color: #666666;
+  margin: 50px 0;
+  font-size: 1.2rem;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.empty-cart p {
+  margin-bottom: 20px;
+}
